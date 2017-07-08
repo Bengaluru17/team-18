@@ -32,45 +32,7 @@
 
 
 <html>
-<head>
-<title>Reaching Hand</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 465px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      /*.row.content {height:100%;} */
-    }
-  </style>
-</head>
+<head><title>Reaching Hand</title></head>
 <style>
 	       .bgmImag {
 					 background-image:url("bg_1.jpg");
@@ -121,29 +83,31 @@
 <!--<img src="rh_logo.jpg" alt="Reaching Hand Logo" style="width:304px;height:228px;">-->
     <form action="" method="POST"> 
 
- <div class="container divp" >
+ <div class="container divp">
 	<table cellspacing="20">
 		<tr>
 			<td>
-				<label class="fcolr" style="font-size:150%"><b>Username</b></label>
+				<label class="fcolr"><b>Username</b></label>
 			</td>
 			<td>
-				<input class="fcolr" type="text" placeholder="Enter Username" name="uname" required style="font-size:150%">
+				<input class="term" type="text" placeholder="Enter Username" name="uname" required>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<label class="fcolr" style="font-size:150%"><b>Password</b></label>
+				<label class="fcolr"><b>Password</b></label>
 			</td>
 			<td>
-				<input class="fcolr" type="password" placeholder="Enter Password" name="psw" required style="font-size:150%;">
+				<input class="term" type="password" placeholder="Enter Password" name="psw" required>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<button class="btn success" type="submit" style="font-size:150%">Log In</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+				<button class="btn success" type="submit">Log In</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 			</td>
-			
+			<td>
+				<button class="btn success" type="button" class="cancelbtn">Sign Up</button>
+			</td>
 		</tr>
 		<tr>
 			<td>
@@ -152,9 +116,7 @@
 		</tr>
 		<tr>
 			<td>
-				<button class="btn" style="position:relative;top:300px">
-				<a href="#" style="color:#999999">Forgot password?</a>
-				</button>
+				<span class="psw"<a href="#">>Forgot password?</a></span>
 			</td>
 		</tr>
   </table>
