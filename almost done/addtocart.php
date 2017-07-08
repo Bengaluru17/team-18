@@ -14,9 +14,7 @@
     <CENTER><h1 style="color:#EEEEEE;"> Add To Inventory </h1>
     </div>
     </nav>    
-    </
             
-           
         </div>
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
             <BR />

@@ -6,9 +6,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
-        <div style="width:100%; height:auto; background-color: rgba(0,0,0,0.5); ">
-            <center>  <h1 style="color: rgba(0,0,0,0.1);"> STUDENT DETAILS </h1></center>
-        </div>
+   <nav class="navbar navbar-inverse" style="background-color:#506650;border:0">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <CENTER><h1 style="color:#EEEEEE;">Staff Details </h1><CENTER>
+    </div>
+</div>
+    </nav> 
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
             <BR />
             
