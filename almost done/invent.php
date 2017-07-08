@@ -2,13 +2,13 @@
 include("setup.php"); 
    session_start();  
    if($_SERVER["REQUEST_METHOD"] == "POST") { 
-       $iid = mysqli_real_escape_string($db,$_POST['iid']); 
+      
        $name = mysqli_real_escape_string($db,$_POST['name']);
        $quantity = mysqli_real_escape_string($db,$_POST['quantity']);
        $section = mysqli_real_escape_string($db,$_POST['section']);
       
 
-       $sql = "INSERT INTO inventory(iid,name,quantity,section) values('$iid','$name','$quantity','$section')"; 
+       $sql = "INSERT INTO inventory(iid,name,quantity,section) values('','$name','$quantity','$section')"; 
            if(mysqli_query($db, $sql)) { 
             echo "New record created successfully  "; 
    } 
@@ -29,8 +29,7 @@ include("setup.php");
    
       <form action="" method="POST"> 
     <div class="form-group" > 
-      <label for="iid">IId</label> 
-      <input required type="number" class="form-control" id="iid" placeholder="IId" name="iid"> 
+      
     </div> 
     <div class="form-group"> 
       <label for="name">Name</label> 

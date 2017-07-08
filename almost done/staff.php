@@ -103,7 +103,7 @@ function doSomething() {
 	<br />
 <br />
 	<button type="button" class="btn btn-primary" style="font-size:250%">
-	    <a href="get_inv.php?" target="content" style="color:#eeeeee">Staff Records</a>
+	    <a href="staff1.php" target="content" style="color:#eeeeee">Staff Records</a>
 	</button>
     	</div>
     </div>
