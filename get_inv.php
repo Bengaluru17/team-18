@@ -20,7 +20,7 @@ tr:nth-child(even) {background-color: #f2f2f2}
  <table border="border">
 <tr>
 <th><center><br /><b>IID</b></center></th>
-     <th><center><br /><b>NAME</b></center></th>+
+     <th><center><br /><b>NAME</b></center></th>
      <th><center><br /><b>QUANTITY</b></center></th>
      <th><center><br /><b>SECTION</b></center></th>
      
