@@ -1,21 +1,31 @@
-<?php
-include("setup.php"); 
-   session_start(); 
-//$con=mysqli_connect("localhost","root","","reachout");
-// Check connection
-
-
-// Perform queries
+ <table border="border">
+<tr>
+<th><center><br /><b>IID</b></center></th>
+     <th><center><br /><b>NAME</b></center></th>
+     <th><center><br /><b>QUANTITY</b></center></th>
+     <th><center><br /><b>SECTION</b></center></th>
+     
+            
+</tr>
+<tr>
+    <?php
+include("setup.php");
+   session_start();
 $qu=mysqli_query($db,"SELECT * FROM inventory");
-//mysqli_query($con,"INSERT INTO Persons (FirstName,LastName,Age)
-//VALUES ('Glenn','Quagmire',33)");
- while($row = mysql_fetch_array($qu, MYSQL_ASSOC)) {
-      echo "IId :{$row['iid']}  <br> ".
-         "Name : {$row['name']} <br> ".
-         "Quantity : {$row['quantity']} <br> ".
-         "Section : {$row['section']} <br> ";
-   }
-
-
-//mysqli_close($con);
+//  $sql3="select * from student where sid=1";
+//$result = mysqli_query($db,$sql3);
+ 
+         
+  while($row1 = $qu->fetch_assoc()) {          
+       echo "<td>".$row1['iid']."</td>";
+       echo "<td>".$row1['name']."</td>";
+       echo "<td>".$row1['quantity']."</td>";
+       echo "<td>".$row1['section']."</td>";
+       
+     
+    }
+   
 ?>
+    </td> 
+</table> 
+

@@ -26,9 +26,9 @@
     <?php
 include("setup.php");
    session_start();
-//$eid=$_GET['eid'];
-//$sql3="select * from student where sid='".$eid."'";
-  $sql3="select * from student where sid=1";
+$eid=$_GET['eid'];
+$sql3="select * from student where sid='".$eid."'";
+//  $sql3="select * from student where sid=1";
 $result = mysqli_query($db,$sql3);
  
          
