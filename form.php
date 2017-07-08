@@ -8,7 +8,12 @@ include("setup.php");
        $name = mysqli_real_escape_string($db,$_POST['name']); 
        $dob = mysqli_real_escape_string($db,$_POST['dob']);
        $gender = mysqli_real_escape_string($db,$_POST['gender']);
-       $sql = "INSERT INTO staff(lid,name,dob,doj) values('','$name','$dob','')"; 
+       $class = mysqli_real_escape_string($db,$_POST['class']);
+       $school = mysqli_real_escape_string($db,$_POST['school']);
+       $aadhar = mysqli_real_escape_string($db,$_POST['aadhar']);
+       $hobbie= mysqli_real_escape_string($db,$_POST['hobbie']);
+
+       $sql = "INSERT INTO student(lid,name,dob,class,school,aadhar,gender,hobbies) values('','$name','$dob','$class','$school','$aadhar','$gender','$hobbie')"; 
            if(mysqli_query($db, $sql)) { 
             echo "New record created successfully  "; 
    } 
@@ -39,6 +44,22 @@ include("setup.php");
     <div class="form-group"> 
       <label for="gender">Gender</label> 
       <input required type="text" class="form-control" id="gender" placeholder="Gender" name="gender"> 
+    </div>
+     <div class="form-group"> 
+      <label for="class">Class</label> 
+      <input required type="text" class="form-control" id="class" placeholder="Class" name="class"> 
+    </div>  
+     <div class="form-group"> 
+      <label for="school">School</label> 
+      <input required type="text" class="form-control" id="name" placeholder="School" name="school"> 
+    </div> 
+     <div class="form-group"> 
+      <label for="aadhar">AadharNo</label> 
+      <input required type="text" class="form-control" id="name" placeholder="Aadhar" name="aadhar"> 
+    </div> 
+     <div class="form-group"> 
+      <label for="hobbie">Hobbies</label> 
+      <input required type="text" class="form-control" id="hobbie" placeholder="Hobbie" name="hobbie"> 
     </div> 
     <button type="submit" class="btn btn-default">Submit</button> 
   </form> 
