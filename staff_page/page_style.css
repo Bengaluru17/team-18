@@ -1,0 +1,22 @@
+header, footer{
+    padding:1em;
+    color:white;
+    background-color: orange;
+    clear:left;
+    text-align: center;
+    overflow=auto;
+}
+#left{ 
+  width: 40%;  
+  background: white; 
+}
+#right{
+  width:60%;
+  background: white; 
+}
+#content { 
+  overflow:auto; 
+  background: gray; 
+}
+#left{float:left}
+#right{float:right}
