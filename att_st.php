@@ -1,4 +1,16 @@
- 
+ <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    height:50px;
+    padding:15px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style> 
  <table border="border">
 <tr>
 <th><center><br /><b>Lid</b></center></th>

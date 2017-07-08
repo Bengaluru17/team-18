@@ -37,7 +37,7 @@ include("setup.php");
 <div class="container"> 
 
     <div class="jumbotron"> 
-        <h1>Student Details</h1> 
+        <h1>Inventory</h1> 
     </div> 
    
       <form action="" method="POST"> 

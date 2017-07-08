@@ -16,6 +16,19 @@ include("setup.php");
 ?> 
 <html> 
 <head> 
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    height:50px;
+    padding:15px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 </head> 
 

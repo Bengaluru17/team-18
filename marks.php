@@ -10,11 +10,11 @@ th,td {
     vertical-align: bottom;
 }
 tr:nth-child(even) {background-color: #f2f2f2}
-</style>
+</style> 
 <html>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
         <div style="width:100%; height:auto; background-color: rgba(0,0,0,0.5); ">
-            <center>  <h1 style="color: rgba(0,0,0,0.1);"> STUDENT DETAILS </h1></center>
+            <center>  <h1 style="color: rgba(0,0,0,0.1);"> Student Marks </h1></center>
         </div>
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
             <BR />
