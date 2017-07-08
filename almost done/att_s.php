@@ -31,11 +31,11 @@ $qu=mysqli_query($db,"SELECT sid,name,class FROM student");
  
          
   while($row1 = $qu->fetch_assoc()) { 
-
+	echo "<tr>";
       echo "<td>".$row1['sid']."</td>";
        echo "<td>".$row1['name']."</td>";
        echo "<td>".$row1['class']."</td>";
-        
+        echo "</tr>";
        } 
 ?>
  </td> 

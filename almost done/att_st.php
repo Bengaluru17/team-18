@@ -31,10 +31,10 @@ $qu=mysqli_query($db,"SELECT lid,name FROM staff");
  
          
   while($row1 = $qu->fetch_assoc()) { 
-
+echo "</tr>";
       echo "<td>".$row1['lid']."</td>";
        echo "<td>".$row1['name']."</td>";
-      
+      echo "</tr>";
        } 
 ?>
  </td> 
