@@ -1,15 +1,45 @@
-<?php
-$con=mysqli_connect("localhost","root","","reachout");
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
 
-// Perform queries
-$query=mysqli_query($con,"SELECT * FROM inventory");
-//mysqli_query($con,"INSERT INTO Persons (FirstName,LastName,Age)
-//VALUES ('Glenn','Quagmire',33)");
-echo query;
-mysqli_close($con);
+th,td {
+    height:50px;
+    padding:15px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
+<div style="overflow-x:auto;">   
+ <table border="border">
+<tr>
+<th><center><br /><b>IID</b></center></th>
+     <th><center><br /><b>NAME</b></center></th>+
+     <th><center><br /><b>QUANTITY</b></center></th>
+     <th><center><br /><b>SECTION</b></center></th>
+     
+            
+</tr>
+<tr>
+    <?php
+include("setup.php");
+   session_start();
+$qu=mysqli_query($db,"SELECT * FROM inventory");
+//  $sql3="select * from student where sid=1";
+//$result = mysqli_query($db,$sql3);
+ 
+         
+  while($row1 = $qu->fetch_assoc()) {          
+       echo "<td>".$row1['iid']."</td>";
+       echo "<td>".$row1['name']."</td>";
+       echo "<td>".$row1['quantity']."</td>";
+       echo "<td>".$row1['section']."</td>";
+       
+     
+    }
+   
 ?>
+    </td> 
+</table> 
+</div>

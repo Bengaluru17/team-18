@@ -44,9 +44,9 @@ function doSomething() {
 }
 </script>
 </head>
-<body>
+<body style="background-image:url('../bg_1.jpg');background-repeat:no-repeat;background-size:cover">
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" style="background-color:#506650">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -54,48 +54,57 @@ function doSomething() {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="https://www.reachinghand.org" style="font-size:125%">Home</a></li>
+        <li><a href="http://reachinghand.org/contacts/" style="color:#ffffff;font-size:125%">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        <li><a href="destroy_session.php" style="font-size:125%"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
   
 <div class="container" >
-    <div class="jumbotron" style="text-align:center">
-        <h1>Reaching Out</h1>
-    </div>
+<br />
+<br />
+        <center><img src="../ReachingHand.jpg" style="height:50%;width:75%;"></img></center>
+<br />
+<br />
+<br />
+
 </div>
 <div class="container-fluid text-center" style="height:100%;">  
-	<div class="container-fluid bg-1 navbar-inverse"> 
-      	<h1 class="margin" style="color:#bbbbbb">Welcome</h1>
-      	<p style="color:#aaaaaa">Welcome to Reaching Hands! What would you like to do?</p>
+	<div class="container-fluid" style="background-color:#506650;border-radius:5px"> 
+      	<h1 class="margin" style="color:#f5f5f5;font-size:500%;">Welcome</h1>
+      	<p style="color:#eeeeee;font-size:250%;">Welcome to Reaching Hands! What would you like to do?</p>
     <div class="row content" style="text-align:center;margin-top:50px">
 	<div class="col-lg-4 ">
-	<button type="button" class="btn" >
-	    <a href="get_inv.php?" target="content">Inventory</a>
+	<br />
+<br />
+	<button type="button" class="btn btn-primary" style="font-size:250%">
+	    <a href="get_inv.php?" target="content" style="color:#eeeeee">Inventory</a>
 	</button>
     	</div>
         <div class="col-lg-4">
-	<button type="button" class="btn" >
-	    <a href="get_inv.php?" target="content">Student Records</a>
+	<br />
+<br />
+	<button type="button" class="btn btn-primary" style="font-size:250%">
+	    <a href="get_inv.php?" target="content" style="color:#eeeeee">Student Records</a>
 	</button>
     	</div>
 	<div class="col-lg-4" >
-	<button type="button" class="btn" >
-	    <a href="get_inv.php?" target="content">Staff Records</a>
+	<br />
+<br />
+	<button type="button" class="btn btn-primary" style="font-size:250%">
+	    <a href="get_inv.php?" target="content" style="color:#eeeeee">Staff Records</a>
 	</button>
     	</div>
     </div>
 </div>
-<footer class="container-fluid text-center">
+<footer class="container-fluid text-center" style="border-radius:5px">
   <p>Copyright cfg 2017</p>
 </footer>
 </body>
