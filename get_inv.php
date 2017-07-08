@@ -1,3 +1,12 @@
+<style>
+td {
+    height:50px;
+    padding:15px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
+<div style="overflow-x:auto;">   
  <table border="border">
 <tr>
 <th><center><br /><b>IID</b></center></th>
@@ -28,4 +37,4 @@ $qu=mysqli_query($db,"SELECT * FROM inventory");
 ?>
     </td> 
 </table> 
-
+</div>
