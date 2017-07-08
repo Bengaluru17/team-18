@@ -1,5 +1,10 @@
 <style>
-td {
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
     height:50px;
     padding:15px;
     vertical-align: bottom;
