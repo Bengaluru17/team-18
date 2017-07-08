@@ -1,0 +1,29 @@
+header, footer{
+    padding:1em;
+    color:white;
+    background-color: orange;
+    clear:left;
+    text-align: center;
+    overflow=auto;
+}
+#left{ 
+  display:inline-block;
+  width: 40%; 
+  margin:5px; 
+  padding: 1em; 
+  background: white; 
+}
+#right{
+  display:inline-block;
+  width:40%;
+  height:100%;
+  margin: 5px;
+  padding: 1em;
+  background: white; 
+}
+#content { 
+  overflow:auto; 
+  background: gray; 
+}
+#left{float:left}
+#right{float:right}
