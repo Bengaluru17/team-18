@@ -7,9 +7,9 @@ if (mysqli_connect_errno())
   }
 
 // Perform queries
-mysqli_query($con,"SELECT * FROM inventory");
+$query=mysqli_query($con,"SELECT * FROM inventory");
 //mysqli_query($con,"INSERT INTO Persons (FirstName,LastName,Age)
 //VALUES ('Glenn','Quagmire',33)");
-
+echo query;
 mysqli_close($con);
 ?>
