@@ -8,10 +8,11 @@
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
+      border-radius: 0;
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 759px}
+    .row.content {height: 465px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -36,6 +37,12 @@
       /*.row.content {height:100%;} */
     }
   </style>
+<script type="text/javascript">
+function doSomething() {
+    $.get("get_inv.php");
+    return false;
+}
+</script>
 </head>
 <body>
 
@@ -62,21 +69,30 @@
 </nav>
   
 <div class="container" >
-    <div class="page-header" style="text-align:center">
+    <div class="jumbotron" style="text-align:center">
         <h1>Reaching Out</h1>
     </div>
 </div>
 <div class="container-fluid text-center" style="height:100%;">  
-    <div class="row content" >
-	<div class="col-sm-2 sidenav" >
+	<div class="container-fluid bg-1 navbar-inverse"> 
+      	<h1 class="margin" style="color:#bbbbbb">Welcome</h1>
+      	<p style="color:#aaaaaa">Welcome to Reaching Hands! What would you like to do?</p>
+    <div class="row content" style="text-align:center;margin-top:50px">
+	<div class="col-lg-4 ">
 	<button type="button" class="btn" >
-	    <a href="get_inv.php" target="content">Inventory</a>
+	    <a href="get_inv.php?" target="content">Inventory</a>
 	</button>
     	</div>
-    	
-        <div class="col-sm-10 text-left">
-	    <iframe id="content" name="content" style="border:none">Select an option</iframe>
-        </div>
+        <div class="col-lg-4">
+	<button type="button" class="btn" >
+	    <a href="get_inv.php?" target="content">Student Records</a>
+	</button>
+    	</div>
+	<div class="col-lg-4" >
+	<button type="button" class="btn" >
+	    <a href="get_inv.php?" target="content">Staff Records</a>
+	</button>
+    	</div>
     </div>
 </div>
 <footer class="container-fluid text-center">
