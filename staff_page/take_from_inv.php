@@ -20,5 +20,6 @@ $qu=mysqli_query($db,"SELECT * FROM inventory");
 <?php
 }
 ?>
+</select>
 </td>
 </tr>
