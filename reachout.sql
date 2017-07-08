@@ -136,9 +136,9 @@ CREATE TABLE `student` (
   `sid` int(11) NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `dob` date DEFAULT NULL,
-  `class` int(11) DEFAULT NULL,
+  `class` varchar(11) DEFAULT NULL,
   `school` varchar(255) DEFAULT NULL,
-  `aadhar` varchar(255) DEFAULT NULL,
+  `aadhar` int(255) DEFAULT NULL,
   `gender` char(1) DEFAULT NULL,
   `hobbies` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
