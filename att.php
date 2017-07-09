@@ -1,3 +1,4 @@
+
 <html>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
 <div style="height:20% width:100%">
@@ -6,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <style>
 table {
     border-collapse: collapse;

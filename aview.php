@@ -1,3 +1,16 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    height:50px;
+    padding:15px;
+    vertical-align: bottom;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+</style> 
 <html>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
         <div style="height:20% width:100%">
