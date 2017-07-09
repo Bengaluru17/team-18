@@ -1,27 +1,15 @@
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th,td {
-    height:50px;
-    padding:15px;
-    vertical-align: bottom;
-}
-tr:nth-child(even) {background-color: #f2f2f2}
-</style> 
 <html>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
-        <div style="width:100%; height:auto; background-color: rgba(0,0,0,0.5); ">
-            <center>  <h1 style="color: rgba(0,0,0,0.1);"> Student Marks </h1></center>
-        </div>
+        
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
+            <div style="height:20% width:100%">
+                <a href="accounts.php"><h4>Home</h4></a>
+</div>  
             <BR />
             <br />
             <br />
+          
             
- <div style="overflow-x:auto;">             
             <CENTER> <table border="border">
 <tr>
 <th><center><br /><b>SID</b></center></th>
@@ -66,7 +54,6 @@ $result = mysqli_query($db,$sql3);
      
 </table> 
             </center>
-</div>
              </div>
    </body> 
 </html>

@@ -14,6 +14,14 @@ include("setup.php");
        $sql = "INSERT INTO student (sid,name,dob,class,school,aadhar,gender,hobbies) values('','$name','$dob','$class','$school','$aadhar','$gender','$hobbie')"; 
            if(mysqli_query($db, $sql)) { 
             echo "New record created successfully  "; 
+            echo '<script> 
+
+  
+       
+       window.location.href = "sdisplay.php?name='.$name.'";
+       
+              
+   </script>';
    } 
    } 
 ?> 
@@ -21,8 +29,10 @@ include("setup.php");
 <head> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 </head> 
-
-<body> 
+<div style="height:20% width:100%">
+    <a href="staff.php"><h4>Home</h4></a>
+</div>
+<body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;"> 
      
 <div class="container"> 
 

@@ -1,0 +1,184 @@
+<?php
+   include('setup.php');
+   session_start();
+  
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      echo "d1";
+      $myusername = mysqli_real_escape_string($db,$_POST['uname']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['psw']); 
+      
+      $sql = "SELECT * FROM login where lid = '$myusername' and password= '$mypassword'";
+      $result = mysqli_query($db,$sql);
+     
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+          
+        $sql = "SELECT * FROM staff where lid = '$myusername' and position= 1";
+      $result = mysqli_query($db,$sql);
+       $count1 = mysqli_num_rows($result);
+       if($count1 == 1){
+        echo "successfully logged in";
+         echo' <script>
+          window.location.href = "staff.php"; </script>';
+       } 
+       else
+       {
+           $sql = "SELECT * FROM staff where lid = '$myusername' and position= 2";
+      $result = mysqli_query($db,$sql);
+       $count1 = mysqli_num_rows($result);
+       if($count1 == 1){
+        echo "successfully logged in";
+         echo' <script>
+          window.location.href = "accounts.php"; </script>';
+       }
+       else
+           $sql = "SELECT * FROM staff where lid = '$myusername' and position= 3";
+      $result = mysqli_query($db,$sql);
+       $count1 = mysqli_num_rows($result);
+       if($count1 == 1){
+        echo "successfully logged in";
+         echo' <script>
+          window.location.href = "main.php"; </script>';
+       }
+       }
+       }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+?>
+
+
+<html>
+<head>
+<title>Reaching Hand</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 465px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      /*.row.content {height:100%;} */
+    }
+  </style>
+</head>
+<style>
+	       .bgmImag {
+					 background-image:url("bg_1.jpg");
+					// <!--height: 100%;-->
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+		            }
+			
+			.fcolr {
+					color: green;
+				}
+			.term {
+					background-color: rgba(0, 0 ,0, 0);
+					color: #5fba3d;
+					border-color: rgba(0,0,0,0);
+					font-size: 32;
+				}
+			.divp {
+					position: absolute;
+					left: 100px;
+					top: 150px;
+				}
+			.btn {
+					border: none; /* Remove borders */
+					color: white; /* Add a text color */
+					padding: 14px 28px; /* Add some padding */
+					cursor: pointer; /* Add a pointer cursor on mouse-over */
+				}
+
+			.success {background-color: #4CAF50;} /* Green */
+			.success:hover {background-color: #46a049;}
+
+			.info {background-color: #2196F3;} /* Blue */
+			.info:hover {background: #0b7dda;}
+
+			.warning {background-color: #ff9800;} /* Orange */
+			.warning:hover {background: #e68a00;}
+
+			.danger {background-color: #f44336;} /* Red */ 
+			.danger:hover {background: #da190b;}
+
+			.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+			.default:hover {background: #ddd;}
+			
+
+	</style>
+<body class="bgmImag">
+<!--<img src="rh_logo.jpg" alt="Reaching Hand Logo" style="width:304px;height:228px;">-->
+    <form action="" method="POST"> 
+
+ <div class="container divp" >
+	<table cellspacing="20"cellpadding="30">
+		<tr>
+			<td>
+				<label class="fcolr" style="font-size:150%"><b>Username</b></label>
+                                
+			</td>
+			<td>
+				<input class="fcolr" type="text" placeholder="Enter Username" name="uname" required style="font-size:150%">
+			 <br /></td>
+		</tr>
+		<tr>
+			<td>
+				<label class="fcolr" style="font-size:150%"><b>Password</b></label>
+			 </td>
+			<td>
+				<input class="fcolr" type="password" placeholder="Enter Password" name="psw" required style="font-size:150%;">
+			</td>
+                         <br />
+		</tr>
+		<tr>
+                     <br />
+                      <br />
+			<td>
+				<button class="btn success" type="submit" >Log In</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" checked="checked"> Remember me
+			</td>
+		</tr>
+		
+  </table>
+  </div>
+</form>
+</body>
+</html>

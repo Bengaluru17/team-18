@@ -37,9 +37,6 @@
       }
       /*.row.content {height:100%;} */
     }
-    marginRow{
-   margin-bottom:0px !important; 
-   }
   </style>
 <script type="text/javascript">
 function doSomething() {
@@ -83,57 +80,37 @@ function doSomething() {
 <br />
 
 </div>
-<div class="container-fluid text-center" style="height:70%;">  
+<div class="container-fluid text-center" style="height:100%;">  
 	<div class="container-fluid" style="background-color:#506650;border-radius:5px"> 
-      	<h1 class="margin" style="color:#f5f5f5;font-size:200%;">Welcome</h1>
-      	<p style="color:#eeeeee;font-size:150%;">Welcome to Reaching Hands! What would you like to do?</p>
-    <div class="row " style="text-align:center;margin-top:50px">
-	<div class="col-xs-4 ">
+      	<h1 class="margin" style="color:#f5f5f5;font-size:150%;">Welcome</h1>
+      	<p style="color:#eeeeee;font-size:100%;">Welcome Reaching Hands Chief! What would you like to do?</p>
+    <div class="row" style="text-align:center;margin-top:50px;padding-bottom:20px">
+	<div class="col-lg-4 ">
 	<br />
 <br />
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-	    <a href="inventory.php?" target="content" style="color:#eeeeee">Inventory</a>
+	<button type="button" class="btn btn-primary" style="font-size:125%">
+	    <a href="aview.php?" target="content" style="color:#eeeeee">Student Attendance</a>
 	</button>
     	</div>
-        <div class="col-xs-4 ">
+        <div class="col-lg-4">
 	<br />
 <br />
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-            <a href="studentmarks.php?" target="content" style="color:#eeeeee">Student Records</a>
+	<button type="button" class="btn btn-primary" style="font-size:125%">
+            <a href="aviews.php?" target="content" style="color:#eeeeee">Staff Attendance</a>
 	</button>
     	</div>
-	<div class="col-xs-4" >
+	<div class="col-lg-4" >
 	<br />
 <br />
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-	    <a href="staff1.php" target="content" style="color:#eeeeee">Staff Records</a>
+	<button type="button" class="btn btn-primary" style="font-size:125%">
+	    <a href="pending.php" target="content" style="color:#eeeeee">Pending Request</a>
 	</button>
     	</div>
     </div>
-        <div class="row" style="text-align:center;margin-top:20px">
-        <div class="col-xs-4" >
-	
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-	    <a href="att_st.php" target="content" style="color:#eeeeee">Staff Attendance</a>
-	</button>
-    	</div>
-        <div class="col-xs-4" >
-	
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-	    <a href="att.php" target="content" style="color:#eeeeee">Student Attendance</a>
-	</button>
-            </div>
-    <div class="col-xs-4" >
-	
-	<button type="button" class="btn btn-primary" style="font-size:150%">
-	    <a href="form.php" target="content" style="color:#eeeeee">New Student</a>
-	</button>
-            </div>
-    	</div>
 </div>
-
 <footer class="container-fluid text-center" style="border-radius:5px">
   <p>Copyright cfg 2017</p>
 </footer>
 </body>
 </html>
+

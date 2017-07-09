@@ -1,8 +1,8 @@
 <html>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
-        <div style="width:100%; height:auto; background-color: rgba(0,0,0,0.5); ">
-            <center>  <h1 style="color: rgba(0,0,0,0.1);"> STAFF ATTENDANCE </h1></center>
-        </div>
+        <div style="height:20% width:100%">
+    <a href="main.php"><h4>Home</h4></a>
+</div>  
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
             <BR />
             <br />
@@ -24,14 +24,14 @@ include("setup.php");
    session_start();
 
 
-$qu=mysqli_query($db,"select lid,count(lid) from attstaff group by sid");
+$qu=mysqli_query($db,"select lid,count(lid) from attstaff group by lid");
 
     while($row1 = $qu->fetch_assoc()) {
-            
+            echo "<tr>";
             echo "<td>".$row1['lid']."</td>";
        
        echo "<td>".$row1['count(lid)']."</td>";
-       
+       echo "<tr>";
        
        
     }

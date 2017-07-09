@@ -1,7 +1,9 @@
+<head>
+
 <style>
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 
 th,td {
@@ -11,56 +13,56 @@ th,td {
 }
 tr:nth-child(even) {background-color: #f2f2f2}
 </style>
-<?php 
-include("setup.php"); 
-   session_start();  
-   if($_SERVER["REQUEST_METHOD"] == "POST") { 
-       $iid = mysqli_real_escape_string($db,$_POST['iid']); 
-       $name = mysqli_real_escape_string($db,$_POST['name']);
-       $quantity = mysqli_real_escape_string($db,$_POST['quantity']);
-       $section = mysqli_real_escape_string($db,$_POST['section']);
-      
-
-       $sql = "INSERT INTO inventory(iid,name,quantity,section) values('$iid','$name','$quantity','$section')"; 
-           if(mysqli_query($db, $sql)) { 
-            echo "New record created successfully  "; 
-   } 
-   }
-?> 
-<html> 
-<head> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-</head> 
-
-<body> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
+<div style="height:20% width:100%">
+    <a href="staff.php"><h4>Home</h4></a>
+</div>
+<div style="overflow-x:auto;">   
+ <table border="border">
+<tr>
+<th><center><br /><b>IID</b></center></th>
+     <th><center><br /><b>NAME</b></center></th>
+     <th><center><br /><b>QUANTITY</b></center></th>
+     <th><center><br /><b>SECTION</b></center></th>
      
-<div class="container"> 
-
-    <div class="jumbotron"> 
-        <h1>Inventory</h1> 
-    </div> 
+            
+</tr>
+<tr>
+    <?php
+include("setup.php");
+   session_start();
+$qu=mysqli_query($db,"SELECT * FROM inventory");
+//  $sql3="select * from student where sid=1";
+//$result = mysqli_query($db,$sql3);
+ 
+         
+  while($row1 = $qu->fetch_assoc()) { 
+      echo "<tr>";
+       echo "<td>".$row1['iid']."</td>";
+       echo "<td>".$row1['name']."</td>";
+       echo "<td>".$row1['quantity']."</td>";
+       echo "<td>".$row1['section']."</td>";
+       echo "</tr>";
+     
+    }
    
-      <form action="" method="POST"> 
-    <div class="form-group"> 
-      <label for="iid">IId</label> 
-      <input required type="number" class="form-control" id="iid" placeholder="IId" name="iid"> 
-    </div> 
-    <div class="form-group"> 
-      <label for="name">Name</label> 
-      <input required type="text" class="form-control" id="name" placeholder="name" name="name"> 
-    </div> 
-    <div class="form-group"> 
-      <label for="quantity">Quantity</label> 
-      <input required type="number" class="form-control" id="quantity" placeholder="quantity" name="quantity"> 
-    </div>
-     <div class="form-group"> 
-      <label for="section">Section</label> 
-      <input required type="text" class="form-control" id="section" placeholder="section" name="section"> 
-    </div>  
-    
-    <button type="submit" class="btn btn-default">Submit</button> 
-  </form> 
-</div> 
+?>
+    </td> 
+</table> 
+</div>
+<div class="row content" style="text-align:center;margin-top:50px">
+	<div class="col-lg-4 ">
+	<button type="button" class="btn btn-primary" style="font-size:150%">
+            <a href="addtocart.php" style="color:#eeeeee">Update Inventory</a>
+	</button>
+    	</div>
+        <div class="col-lg-4">
 
-</body> 
-</html>
+	<button type="button" class="btn btn-primary" style="font-size:150%">
+            <a href="invent.php" style="color:#eeeeee">New Inventory</a>
+	</button>
+    	</div>
+</body>

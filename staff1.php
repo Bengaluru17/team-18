@@ -1,7 +1,8 @@
-<style>
+<html>
+    <style>
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 
 th,td {
@@ -11,18 +12,19 @@ th,td {
 }
 tr:nth-child(even) {background-color: #f2f2f2}
 </style>
-<html>
+        <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <div style="height:20% width:100%">
+    <a href="staff.php"><h4>Home</h4></a>
+</div>
     <body style="background-image: url('back1.png');background-repeat: no-repeat; background-size:cover;">
-        <div style="width:100%; height:auto; background-color: rgba(0,0,0,0.5); ">
-            <center>  <h1 style="color: rgba(0,0,0,0.1);"> STUDENT DETAILS </h1></center>
-        </div>
+        
         <div style="  height: 100%; background-position-x: 200px;background-position-y: 300px;">
-            <BR />
-            <br />
-            <br />
-            
-<div style="overflow-x:auto;">            
-            <CENTER> <table border="border">
+<table border="border">
 <tr>
 <th><center><br /><b>LID</b></center></th>
      <th><center><br /><b>NAME</b></center></th>
@@ -64,7 +66,6 @@ $result = mysqli_query($db,$sql3);
      
 </table> 
             </center>
-</div>
              </div>
    </body> 
 </html>
