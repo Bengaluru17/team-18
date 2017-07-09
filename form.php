@@ -22,7 +22,7 @@ include("setup.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 </head> 
 
-<body> 
+<body style="background-image:url('bg_1.jpg')"> 
      
 <div class="container"> 
 
